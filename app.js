@@ -18,6 +18,7 @@ const startButton = document.querySelector('#start');
 const timeCounter = document.querySelector('#timer');
 const wordsCounter = document.querySelector('#words');
 const correctWords = document.querySelector('#correct-words');
+const lastLetter = document.querySelector('#last-letter');
 
 let position = 0;
 let errors = 0;
@@ -101,6 +102,8 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Shift') {
         return;
     }
+
+    lastLetter.textContent = event.key !== 'Backspace' ? event.key !== " " ? event.key : "_" : '⌫';
 
     if (event.key === letters[position].letter) {
         letters[position].correct();
