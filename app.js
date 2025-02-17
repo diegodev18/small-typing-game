@@ -74,6 +74,7 @@ class Letter {
 }
 
 timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
+wordsCounter.nextElementSibling.textContent = `${wordsCounter.value < 10 ? `0${wordsCounter.value}` : wordsCounter.value} words`;
 
 const letters = [];
 for (let i = 0; i < wordsCounter.value; i++) {
