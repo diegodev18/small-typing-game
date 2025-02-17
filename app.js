@@ -38,12 +38,16 @@ class Letter {
     correct() {
         if (this.letter !== ' ') {
             this.newLetter.style.color = '#8aff9e';
+        } else {
+            this.newLetter.style.color = '#282828';
         }
     }
 
     active() {
         if (this.letter !== ' ') {
             this.newLetter.style.color = '#fff';
+        } else {
+            this.newLetter.style.color = '#282828';
         }
     }
 
