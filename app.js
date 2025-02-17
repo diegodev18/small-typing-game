@@ -63,6 +63,8 @@ class Letter {
     }
 }
 
+timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
+
 const letters = [];
 for (let i = 0; i < 100; i++) {
     const word_letters = words[Math.floor(Math.random() * words.length)].split('');
@@ -76,6 +78,10 @@ letters[0].active();
 startButton.addEventListener('click', () => {
     let time = timeCounter.valueAsNumber;
     console.log(time);
+})
+
+timeCounter.addEventListener('input', () => {
+    timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
 })
 
 document.addEventListener('keydown', (event) => {
@@ -107,5 +113,6 @@ document.addEventListener('keydown', (event) => {
         letters[position].active();
         errors++;
         errorCounter.textContent = errors;
+        errorCounter.style.color = errors > 10 ? errors > 20 ? '#f13131' : '#ff8278' : '#fff';
     }
 })
