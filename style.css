@@ -49,6 +49,7 @@ p {
     color: #ffffff88;
     opacity: 0.8;
     margin: 0;
+    transition: color 150ms ease-in-out;
 }
 
 #timer-container {
