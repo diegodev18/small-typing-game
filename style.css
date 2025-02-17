@@ -64,6 +64,17 @@ p {
     }
 }
 
+#github {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    transition: scale 200ms ease-in-out;
+    
+    &:hover {
+        scale: 1.1;
+    }
+}
+
 .active {
     color: #ffffff;
 }
