@@ -76,7 +76,7 @@ class Letter {
 timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
 
 const letters = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < wordsCounter.value; i++) {
     const word_letters = wordsList[Math.floor(Math.random() * wordsList.length)].split('');
     word_letters.forEach(letter => {
         letters.push(new Letter(letter));
