@@ -99,7 +99,7 @@ wordsCounter.addEventListener('input', () => {
 })
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Shift') {
+    if (event.key === 'Shift' || event.key === 'CapsLock' || event.key === 'Control' || event.key === 'Alt' || event.key === 'Meta') {
         return;
     }
 
