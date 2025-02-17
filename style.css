@@ -19,7 +19,6 @@ main {
     padding: 15px;
     gap: 1px;
     /* background-color: aliceblue; */
-    min-width: 600px;
     max-width: 800px;
     min-height: 300px;
     max-height: 400px;
