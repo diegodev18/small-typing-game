@@ -1,4 +1,4 @@
-const words = [
+const wordsList = [
     'javascript', 'python', 'java', 'c', 'c++', 'c#', 'ruby', 'swift', 'kotlin', 'php', 'rust', 'go', 'typescript', 'html', 'css', 'sql',
     'programacion', 'desarrollo', 'software', 'hardware', 'computadora', 'ordenador', 'sistema', 'framework', 'biblioteca', 'api', 'backend', 'frontend', 'fullstack',
     'jugando', 'juego', 'videojuego', 'consola', 'pc', 'gamer', 'desarrollador', 'ingeniero', 'ingenieria', 'tecnologia', 'informatica',
@@ -17,9 +17,11 @@ const errorCounter = document.querySelector('#counter');
 const startButton = document.querySelector('#start');
 const timeCounter = document.querySelector('#timer');
 const wordsCounter = document.querySelector('#words');
+const correctWords = document.querySelector('#correct-words');
 
 let position = 0;
 let errors = 0;
+let words = 0;
 
 class Letter {
     constructor(letter, classList = []) {
@@ -40,6 +42,8 @@ class Letter {
             this.newLetter.style.color = '#8aff9e';
         } else {
             this.newLetter.style.color = '#282828';
+            words++;
+            correctWords.textContent = words;
         }
     }
 
@@ -72,7 +76,7 @@ timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
 
 const letters = [];
 for (let i = 0; i < 100; i++) {
-    const word_letters = words[Math.floor(Math.random() * words.length)].split('');
+    const word_letters = wordsList[Math.floor(Math.random() * wordsList.length)].split('');
     word_letters.forEach(letter => {
         letters.push(new Letter(letter));
     })
