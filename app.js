@@ -69,7 +69,6 @@ for (let i = 0; i < 100; i++) {
     })
     letters.push(new Letter('_', ['space']));
 }
-console.log(letters);
 letters[0].active();
 
 document.addEventListener('keydown', (event) => {
