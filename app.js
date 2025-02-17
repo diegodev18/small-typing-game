@@ -14,6 +14,8 @@ const words = [
 
 const main = document.querySelector('main');
 const errorCounter = document.querySelector('#counter');
+const startButton = document.querySelector('#start');
+const timeCounter = document.querySelector('#timer');
 
 let position = 0;
 let errors = 0;
@@ -70,6 +72,11 @@ for (let i = 0; i < 100; i++) {
     letters.push(new Letter('_', ['space']));
 }
 letters[0].active();
+
+startButton.addEventListener('click', () => {
+    let time = timeCounter.valueAsNumber;
+    console.log(time);
+})
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Shift') {
