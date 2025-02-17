@@ -56,10 +56,14 @@ p {
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 200ms ease-in-out;
+        transition: background-color 200ms ease-in-out, scale 100ms ease-in-out;
 
         &:hover {
             background-color: #606060;
+        }
+
+        &:active {
+            scale: 0.9;
         }
     }
 }
