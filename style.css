@@ -41,6 +41,28 @@ p {
     margin: 0;
 }
 
+#timer-container {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    gap: 5px;
+
+    & button {
+        font-size: 15px;
+        background-color: #505050;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover {
+            background-color: #606060;
+        }
+    }
+}
+
 .active {
     color: #ffffff;
 }
