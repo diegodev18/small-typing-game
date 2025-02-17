@@ -16,6 +16,7 @@ const main = document.querySelector('main');
 const errorCounter = document.querySelector('#counter');
 const startButton = document.querySelector('#start');
 const timeCounter = document.querySelector('#timer');
+const wordsCounter = document.querySelector('#words');
 
 let position = 0;
 let errors = 0;
@@ -82,6 +83,10 @@ startButton.addEventListener('click', () => {
 
 timeCounter.addEventListener('input', () => {
     timeCounter.nextElementSibling.textContent = `${timeCounter.value} sec`;
+})
+
+wordsCounter.addEventListener('input', () => {
+    wordsCounter.nextElementSibling.textContent = `${wordsCounter.value < 10 ? `0${wordsCounter.value}` : wordsCounter.value} words`;
 })
 
 document.addEventListener('keydown', (event) => {
