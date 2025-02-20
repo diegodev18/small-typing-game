@@ -99,7 +99,7 @@ wordsCounter.addEventListener('input', () => {
     wordsCounter.nextElementSibling.textContent = `${wordsCounter.value < 10 ? `0${wordsCounter.value}` : wordsCounter.value} words`;
 })
 
-document.addEventListener('keydown', (event) => {
+window.addEventListener('keydown', (event) => {
     if (event.key === 'Shift' || event.key === 'CapsLock' || event.key === 'Control' || event.key === 'Alt' || event.key === 'Meta') {
         return;
     }
