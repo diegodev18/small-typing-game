@@ -67,9 +67,16 @@ class Letter {
             this.newLetter.style.color = '#282828';
         }
     }
+}
 
+class Game {
     static gameOver() {
+        console.log('Game Over!');
+    }
 
+    static gameWon() {
+        console.log('You won!');
+        // event.preventDefault();
     }
 }
 
@@ -104,16 +111,13 @@ window.addEventListener('keydown', (event) => {
         return;
     }
 
+    if (position === letters.length - 1) { return; }
+    if (position === letters.length - 2) { Game.gameWon(); }
+
     lastLetter.textContent = event.key !== 'Backspace' ? event.key !== " " ? event.key : "_" : '⌫';
 
     if (event.key === letters[position].letter) {
         letters[position].correct();
-
-        if (position === document.querySelectorAll('p').length - 1) {
-            console.log('You won!');
-            return;
-        }
-
         position++;
         letters[position].active();
     }
